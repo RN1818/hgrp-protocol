@@ -1,8 +1,19 @@
 # HGRP Protocol
 
-This folder contains the HGRP simulator, supporting visualisation tools, and the HGRP vs OSPF comparison script.
+This repository contains a simulation of the Hierarchical Gradient Routing Protocol (HGRP), along with supporting visualisation tools.
+
+The Hierarchical Gradient Routing Protocol (HGRP) is a link-state interior gateway protocol designed for a single administrative domain. It extends OSPF by replacing the fixed two-level area structure with a recursively uniform hierarchy of arbitrary depth, where identical forwarding and flooding rules apply at every level.
+
+HGRP preserves OSPF’s adjacency model, reliable flooding, and Dijkstra-based shortest path computation. It introduces Summary Advertisements to propagate reachability upward in the hierarchy while limiting topology change notifications to the originating region.
+
+The design addresses OSPF’s scalability limitations, where full link-state replication within an area causes network-wide flooding and frequent SPF recomputation. Although OSPF areas reduce this overhead, the fixed two-level structure is insufficient for deeply nested networks.
+
+HGRP generalises the hierarchy to an operator-defined multi-level model and uses a forwarding escalation mechanism to maintain loop-free routing without requiring global topology knowledge at every router.
+
 
 ## Content
+
+The `/simulation/` directory contains the following files:
 
 - `hgrp_main.py` - interactive CLI for building and simulating an HGRP network
 - `packet_transfer_simulator.py` - batch packet-flow simulator
@@ -65,3 +76,10 @@ python hgrp_vs_ospf_comparison.py
 ## Output
 
 Generated diagrams and other artifacts are written to the `output/` folder used by each script.
+
+## Contributors
+
+- [Roshan Nimantha](https://github.com/RN1818)
+- [Manitha Ayanaja](https://github.com/ManiiAya)
+- [Sasith Induwara](https://github.com/SasithIM)
+- [Mishen Weerasinghe](https://github.com/Mishen-Weerasinghe)
