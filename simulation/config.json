@@ -1,0 +1,16 @@
+{
+  "network_topology": {
+    "depth": 4,
+    "branch_factors": [3, 2, 1, 2],
+    "count_routers": [3, 4, 4, 8, 5],
+    "count_border_routers": [3, 1, 2, 2, 1],
+    "count_parent_connections": 2,
+    "cost_min": 1,
+    "cost_max": 10,
+    "seed": 42
+  },
+  "output": {
+    "directory": "./output",
+    "image_dpi": 130
+  }
+}

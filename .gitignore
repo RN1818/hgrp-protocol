@@ -1,0 +1,20 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+__pycache__/
+
+# Build output
+build/
+dist/
+*.o
+*.a
+*.so
+
+# Temporary files
+*.tmp
+tmp/
+temp/
