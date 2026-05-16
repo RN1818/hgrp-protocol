@@ -1,4 +1,4 @@
-# HGRP Protocol
+# Hierarchical Gradient Routing Protocol (HGRP)
 
 This repository contains a simulation of the Hierarchical Gradient Routing Protocol (HGRP), along with supporting visualisation tools.
 
